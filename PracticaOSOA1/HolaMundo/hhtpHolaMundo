@@ -1,0 +1,42 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<log xmlns:wsi-monConfig="http://www.ws-i.org/testing/2003/03/monitorConfig/" xmlns:wsi-common="http://www.ws-i.org/testing/2003/03/common/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" timestamp="2021-11-01T12:30:32.448Z" xmlns="http://www.ws-i.org/testing/2003/03/log/">
+   <monitor version="1.0" releaseDate="2003-05-01">
+      <implementer name="Oracle Corporation" location="http://technet.oracle.com/"/>
+      <environment>
+         <runtime name="Java" version="1.8.0_202"/>
+         <operatingSystem name="Windows 10" version=""/>
+         <xmlParser name="Oracle XML Parser" version=""/>
+      </environment>
+      <wsi-monConfig:configuration xmlns:wsi-monConfig="http://www.ws-i.org/testing/2003/03/log/">
+         <wsi-monConfig:logFile replace="true" location="C:/JDeveloper/mywork/PracticaOSOA1/HolaMundo/hhtpHolaMundo"/>
+         <wsi-monConfig:logDuration>30</wsi-monConfig:logDuration>
+         <wsi-monConfig:cleanupTimeoutSeconds>30</wsi-monConfig:cleanupTimeoutSeconds>
+      </wsi-monConfig:configuration>
+   </monitor>
+   <messageEntry xsi:type="httpMessageEntry" timestamp="2021-11-01T12:28:38.546Z" conversationID="6" ID="dcc46b02-017c-1000-8001-c0a86472a9fe" type="request">
+      <messageContent>&lt;env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://xmlns.oracle.com/PracticaOSOA1/HolaMundo/HolaMundoBPELProcess1">&lt;env:Header/>&lt;env:Body>&lt;ns1:process>&lt;ns1:input>¿cómo estás?&lt;/ns1:input>&lt;/ns1:process>&lt;/env:Body>&lt;/env:Envelope></messageContent>
+      <senderHostAndPort>localhost:8099</senderHostAndPort>
+      <receiverHostAndPort>DESKTOP-JM2MVUA:7102</receiverHostAndPort>
+      <httpHeaders>POST https://DESKTOP-JM2MVUA:7102/soa-infra/services/default/HolaMundo!1.0*soa_14b3f6fd-942c-46cf-ae53-d2312d9b7bb5/holamundobpelprocess1_client_ep HTTP/1.1
+SOAPAction: "process"
+Content-Type: text/xml; charset=UTF-8
+Host: DESKTOP-JM2MVUA:7102
+Content-Length: 264
+X-HTTPAnalyzer-Rules: 1@localhost:8099
+</httpHeaders>
+   </messageEntry>
+   <messageEntry xsi:type="httpMessageEntry" timestamp="2021-11-01T12:28:38.631Z" conversationID="6" ID="dcc46b03-017c-1000-8002-c0a86472a9fe" type="response">
+      <messageContent>&lt;env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">&lt;env:Header>&lt;wsa:Action>process&lt;/wsa:Action>&lt;wsa:MessageID>urn:883c7854-3b41-11ec-8055-625bc2fdf069&lt;/wsa:MessageID>&lt;wsa:ReplyTo>&lt;wsa:Address>http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address>&lt;wsa:ReferenceParameters>&lt;instra:tracking.ecid xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">197a9c46-dfca-49ac-81d0-624f50934c04-0000018f&lt;/instra:tracking.ecid>&lt;instra:tracking.FlowEventId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">29&lt;/instra:tracking.FlowEventId>&lt;instra:tracking.FlowId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">6&lt;/instra:tracking.FlowId>&lt;instra:tracking.CorrelationFlowId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">0000NnSkesrEkJWzLwNM8A1XW2ze000007&lt;/instra:tracking.CorrelationFlowId>&lt;instra:tracking.quiescing.SCAEntityId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">4&lt;/instra:tracking.quiescing.SCAEntityId>&lt;/wsa:ReferenceParameters>&lt;/wsa:ReplyTo>&lt;wsa:FaultTo>&lt;wsa:Address>http://www.w3.org/2005/08/addressing/anonymous&lt;/wsa:Address>&lt;/wsa:FaultTo>&lt;/env:Header>&lt;env:Body>&lt;processResponse xmlns="http://xmlns.oracle.com/PracticaOSOA1/HolaMundo/HolaMundoBPELProcess1">&lt;result>¿cómo estás?HolaMundo&lt;/result>&lt;/processResponse>&lt;/env:Body>&lt;/env:Envelope></messageContent>
+      <senderHostAndPort>DESKTOP-JM2MVUA:7102</senderHostAndPort>
+      <receiverHostAndPort>localhost:8099</receiverHostAndPort>
+      <httpHeaders>HTTP/1.1 200 OK
+Date: Mon, 01 Nov 2021 18:28:38 GMT
+X-ORACLE-DMS-RID: 0
+Content-Length: 1352
+SOAPAction: ""
+X-ORACLE-DMS-ECID: 197a9c46-dfca-49ac-81d0-624f50934c04-00000190
+Content-Type: text/xml; charset=UTF-8
+X-HTTPAnalyzer-RuleName: Pass through :
+</httpHeaders>
+   </messageEntry>
+</log>
